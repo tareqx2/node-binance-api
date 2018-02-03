@@ -663,6 +663,9 @@ LIMIT_MAKER
         exchangeInfo: function(callback) {
             publicRequest(base+'v1/exchangeInfo', {}, callback);
         },
+        allPrices: function(callback) {
+            publicRequest(base+'v1/ticker/allPrices', {}, callback);
+        },
         withdraw: function(asset, address, amount, addressTag = false, callback = false) {
             let params = {asset, address, amount};
             params.name = 'API Withdraw';
